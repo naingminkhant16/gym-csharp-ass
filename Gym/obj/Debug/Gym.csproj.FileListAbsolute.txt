@@ -1,0 +1,11 @@
+D:\BUC\C#\Visual Studio Projects\source\repos\Gym\Gym\bin\Debug\Gym.exe.config
+D:\BUC\C#\Visual Studio Projects\source\repos\Gym\Gym\bin\Debug\Gym.exe
+D:\BUC\C#\Visual Studio Projects\source\repos\Gym\Gym\bin\Debug\Gym.pdb
+D:\BUC\C#\Visual Studio Projects\source\repos\Gym\Gym\obj\Debug\Gym.csproj.AssemblyReference.cache
+D:\BUC\C#\Visual Studio Projects\source\repos\Gym\Gym\obj\Debug\Gym.Properties.Resources.resources
+D:\BUC\C#\Visual Studio Projects\source\repos\Gym\Gym\obj\Debug\Gym.csproj.GenerateResource.cache
+D:\BUC\C#\Visual Studio Projects\source\repos\Gym\Gym\obj\Debug\Gym.csproj.CoreCompileInputs.cache
+D:\BUC\C#\Visual Studio Projects\source\repos\Gym\Gym\obj\Debug\Gym.exe
+D:\BUC\C#\Visual Studio Projects\source\repos\Gym\Gym\obj\Debug\Gym.pdb
+D:\BUC\C#\Visual Studio Projects\source\repos\Gym\Gym\obj\Debug\Gym.frmWelcome.resources
+D:\BUC\C#\Visual Studio Projects\source\repos\Gym\Gym\obj\Debug\Gym.frmUserMenu.resources
