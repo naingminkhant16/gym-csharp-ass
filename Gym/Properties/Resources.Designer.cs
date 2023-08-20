@@ -63,9 +63,39 @@ namespace Gym.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap OIP {
+            get {
+                object obj = ResourceManager.GetObject("OIP", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap register {
+            get {
+                object obj = ResourceManager.GetObject("register", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap welcome {
             get {
                 object obj = ResourceManager.GetObject("welcome", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap welcome1 {
+            get {
+                object obj = ResourceManager.GetObject("welcome1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

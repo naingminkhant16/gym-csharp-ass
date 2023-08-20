@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Gym
 {
-    public partial class frmWelcome : Form
+    public partial class frmAdminLogin : Form
     {
-        public frmWelcome()
+        public frmAdminLogin()
         {
             InitializeComponent();
         }
@@ -29,7 +29,7 @@ namespace Gym
             {
                 string password = Password.Hash(txtPassword.Text.Trim());//hash user input password
 
-                DBConnection db = new DBConnection($"select * from Member" +
+                DBConnection db = new DBConnection($"select * from Admin" +
                     $" where Username = '{txtUsername.Text.Trim()}' and" +
                     $" Password = '{password}'");
 
@@ -37,9 +37,9 @@ namespace Gym
                 if (db.GetDataTable().Rows.Count == 1)
                 {
                     MessageBox.Show("Login Success");
-                    frmUserMenu userMenu = new frmUserMenu();
+                    frmAdminMenu adminMenu = new frmAdminMenu();
                     this.Hide();
-                    userMenu.Show();
+                    adminMenu.Show();
                 }
                 else
                 {
@@ -56,18 +56,11 @@ namespace Gym
             txtPassword.Text = "";
         }
 
-        private void lklAdmin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lklWelcome_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmAdminLogin adminLogin = new frmAdminLogin();
+            frmWelcome welcome = new frmWelcome();
             this.Hide();
-            adminLogin.Show();
-        }
-
-        private void lklRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            frmRegister register = new frmRegister();
-            this.Hide();
-            register.Show();
+            welcome.Show();
         }
 
         private void btnPassShowHide_Click(object sender, EventArgs e)

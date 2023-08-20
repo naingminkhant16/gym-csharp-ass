@@ -1,7 +1,7 @@
 ﻿
 namespace Gym
 {
-    partial class frmWelcome
+    partial class frmAdminLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -30,48 +30,27 @@ namespace Gym
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lklRegister = new System.Windows.Forms.LinkLabel();
+            this.lklWelcome = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lklAdmin = new System.Windows.Forms.LinkLabel();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnPassShowHide = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(68, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(280, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome To BUC Gym";
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(203, 105);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(145, 21);
-            this.txtUsername.TabIndex = 1;
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.groupBox1.Controls.Add(this.btnPassShowHide);
-            this.groupBox1.Controls.Add(this.lklRegister);
+            this.groupBox1.Controls.Add(this.lklWelcome);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btnClear);
@@ -81,35 +60,47 @@ namespace Gym
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtUsername);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(194, 69);
+            this.groupBox1.Location = new System.Drawing.Point(199, 64);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(403, 323);
-            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Member Login";
+            this.groupBox1.Text = "Admin Login";
             // 
-            // lklRegister
+            // lklWelcome
             // 
-            this.lklRegister.AutoSize = true;
-            this.lklRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lklRegister.Location = new System.Drawing.Point(220, 278);
-            this.lklRegister.Name = "lklRegister";
-            this.lklRegister.Size = new System.Drawing.Size(82, 15);
-            this.lklRegister.TabIndex = 8;
-            this.lklRegister.TabStop = true;
-            this.lklRegister.Text = "Register now.";
-            this.lklRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklRegister_LinkClicked);
+            this.lklWelcome.AutoSize = true;
+            this.lklWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lklWelcome.Location = new System.Drawing.Point(200, 279);
+            this.lklWelcome.Name = "lklWelcome";
+            this.lklWelcome.Size = new System.Drawing.Size(62, 15);
+            this.lklWelcome.TabIndex = 8;
+            this.lklWelcome.TabStop = true;
+            this.lklWelcome.Text = "Welcome.";
+            this.lklWelcome.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklWelcome_LinkClicked);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label4.Location = new System.Drawing.Point(96, 278);
+            this.label4.Location = new System.Drawing.Point(132, 279);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 15);
+            this.label4.Size = new System.Drawing.Size(65, 15);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Don\'t have account?";
+            this.label4.Text = "Go back to";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(114, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(202, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Welcome Admin";
             // 
             // btnClear
             // 
@@ -165,19 +156,13 @@ namespace Gym
             this.label2.TabIndex = 2;
             this.label2.Text = "Username";
             // 
-            // lklAdmin
+            // txtUsername
             // 
-            this.lklAdmin.AutoSize = true;
-            this.lklAdmin.BackColor = System.Drawing.Color.Transparent;
-            this.lklAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lklAdmin.LinkColor = System.Drawing.Color.White;
-            this.lklAdmin.Location = new System.Drawing.Point(712, 9);
-            this.lklAdmin.Name = "lklAdmin";
-            this.lklAdmin.Size = new System.Drawing.Size(76, 15);
-            this.lklAdmin.TabIndex = 3;
-            this.lklAdmin.TabStop = true;
-            this.lklAdmin.Text = "Admin Login";
-            this.lklAdmin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lklAdmin_LinkClicked);
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(203, 105);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(145, 21);
+            this.txtUsername.TabIndex = 1;
             // 
             // errorProvider
             // 
@@ -190,43 +175,40 @@ namespace Gym
             this.btnPassShowHide.Location = new System.Drawing.Point(354, 158);
             this.btnPassShowHide.Name = "btnPassShowHide";
             this.btnPassShowHide.Size = new System.Drawing.Size(22, 23);
-            this.btnPassShowHide.TabIndex = 23;
+            this.btnPassShowHide.TabIndex = 24;
             this.btnPassShowHide.Text = "👁";
             this.btnPassShowHide.UseVisualStyleBackColor = false;
             this.btnPassShowHide.Click += new System.EventHandler(this.btnPassShowHide_Click);
             // 
-            // frmWelcome
+            // frmAdminLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Gym.Properties.Resources.welcome;
+            this.BackgroundImage = global::Gym.Properties.Resources.welcome1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.lklAdmin);
             this.Controls.Add(this.groupBox1);
-            this.Name = "frmWelcome";
-            this.Text = "Welcome";
+            this.Name = "frmAdminLogin";
+            this.Text = "Admin Login";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.LinkLabel lklRegister;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.LinkLabel lklAdmin;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.LinkLabel lklWelcome;
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.Button btnPassShowHide;
     }

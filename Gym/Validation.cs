@@ -9,8 +9,7 @@ namespace Gym
 {
     class Validation
     {
-       /* private bool pass = false;
-        public bool Pass { get; set; }*/
+      
         private ErrorProvider errorProvider;
         public Validation(ErrorProvider err)
         {
