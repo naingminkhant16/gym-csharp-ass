@@ -18,7 +18,7 @@ namespace Gym
             InitializeComponent();
         }
         private bool editMode = false;
-        private void GetData(string query)
+        private void GetData(string query = "select * from Trainer")
         {
             DBConnection db = new DBConnection(query);
             dgv1.DataSource = db.GetDataTable();
@@ -27,7 +27,7 @@ namespace Gym
         private void frmAdminTrainers_Load(object sender, EventArgs e)
         {
             txtId.Text = newId().ToString();
-            GetData("select * from Trainer");
+            GetData();
         }
 
         private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -104,7 +104,7 @@ namespace Gym
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            GetData("select * from Trainer");
+            GetData();
             Clear();
         }
 
@@ -146,7 +146,7 @@ namespace Gym
                     MessageBox.Show("Successfully Created", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     Clear();
-                    GetData("select * from Trainer");
+                    GetData();
                 }
                 catch (Exception ex)
                 {
@@ -156,6 +156,43 @@ namespace Gym
 
             }
 
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //validation
+                Validation validation = new Validation(errorProvider);
+                validation.CheckRequired(txtToDeleteId);
+
+                if (string.IsNullOrEmpty(errorProvider.GetError(txtToDeleteId)))
+                {
+                    int idToDelete = Convert.ToInt32(txtToDeleteId.Text.Trim());
+
+                    //ask confirmation message
+                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete?", "Confirmation",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        DBConnection db = new DBConnection($"delete from Trainer where Id='{idToDelete}'");
+
+                        MessageBox.Show("Successfully deleted",
+                          "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        txtToDeleteId.Text = "";
+                        GetData();
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Invalid input!",
+                      "Warnning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
