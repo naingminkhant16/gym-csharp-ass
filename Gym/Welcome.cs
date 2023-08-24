@@ -37,6 +37,11 @@ namespace Gym
                 if (db.GetDataTable().Rows.Count == 1)
                 {
                     MessageBox.Show("Login Success");
+
+                    //add auth value 
+                    Auth.Id = Convert.ToInt32(db.GetDataTable().Rows[0]["Id"]);
+                    Auth.Username = db.GetDataTable().Rows[0]["Username"].ToString();
+
                     frmUserMenu userMenu = new frmUserMenu();
                     this.Hide();
                     userMenu.Show();

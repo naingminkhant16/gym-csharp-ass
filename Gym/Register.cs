@@ -21,8 +21,6 @@ namespace Gym
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-
-
             Validation validation = new Validation(errorProvider);
             validation.CheckRequired(txtName);
             validation.CheckRequired(txtPassword);
@@ -70,8 +68,10 @@ namespace Gym
 
                             DBConnection db = new DBConnection($"insert into Member(Id,Name,Username,Password,Age,Gender,Status,Phone)" +
                                 $" values('{newId}','{name}','{username}','{password}','{age}','{gender}','{status}','{phone}')");
-                            
+
                             DialogResult dialogResult = MessageBox.Show("Successfully registered.Login Now.", "Login Now", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                            autoId();
 
                             if (dialogResult == DialogResult.Yes)
                             {
@@ -139,7 +139,6 @@ namespace Gym
         {
             txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
             txtComPassword.UseSystemPasswordChar = !txtComPassword.UseSystemPasswordChar;
-
         }
     }
 }

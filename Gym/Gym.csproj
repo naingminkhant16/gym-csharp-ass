@@ -58,6 +58,13 @@
     <Compile Include="AdminMenu.Designer.cs">
       <DependentUpon>AdminMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminTrainers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminTrainers.Designer.cs">
+      <DependentUpon>AdminTrainers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auth.cs" />
     <Compile Include="DBConnection.cs" />
     <Compile Include="Password.cs" />
     <Compile Include="Program.cs" />
@@ -86,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminMenu.resx">
       <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminTrainers.resx">
+      <DependentUpon>AdminTrainers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -130,6 +140,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\OIP.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcome2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

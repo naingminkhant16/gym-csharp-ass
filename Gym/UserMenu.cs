@@ -16,5 +16,10 @@ namespace Gym
         {
             InitializeComponent();
         }
+
+        private void frmUserMenu_Load(object sender, EventArgs e)
+        {
+            lblLoginAs.Text = Auth.Username;
+        }
     }
 }

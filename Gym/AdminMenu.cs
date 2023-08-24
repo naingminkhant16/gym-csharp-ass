@@ -16,5 +16,27 @@ namespace Gym
         {
             InitializeComponent();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+
+            Auth.Logout();
+            
+            frmAdminLogin adminLogin = new frmAdminLogin();
+            this.Hide();
+            adminLogin.Show();
+        }
+
+        private void frmAdminMenu_Load(object sender, EventArgs e)
+        {
+            lblLoginAs.Text += " " + Auth.Username;
+        }
+
+        private void btnTrainers_Click(object sender, EventArgs e)
+        {
+            frmAdminTrainers trainers = new frmAdminTrainers();
+            this.Hide();
+            trainers.Show();
+        }
     }
 }
