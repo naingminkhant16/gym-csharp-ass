@@ -106,9 +106,15 @@ namespace Gym
         {
             GetData();
             Clear();
+            txtToDeleteId.Text = "";
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
+        {
+            CreateOrUpdateOperation("create");
+        }
+
+        private void CreateOrUpdateOperation(string operationName)
         {
             //check text boxes required validation
             Validation validation = new Validation(errorProvider);
@@ -137,13 +143,21 @@ namespace Gym
 
                     string gender = (rdbMale.Checked) ? "Male" : "Female";
 
-                    string query = $"insert into Trainer(Id,Name,Age,Address,Phone,Status,Gender) values" +
-                        $"('{txtId.Text.Trim()}','{txtName.Text.Trim()}','{age}','{txtAddress.Text.Trim()}'," +
-                        $"'{phone}','{cboStatus.Text}','{gender}')";
+                    if (operationName.ToLower() == "create")//insert
+                    {
+                        string query = $"insert into Trainer(Id,Name,Age,Address,Phone,Status,Gender) values" +
+                      $"('{txtId.Text.Trim()}','{txtName.Text.Trim()}','{age}','{txtAddress.Text.Trim()}'," +
+                      $"'{phone}','{cboStatus.Text}','{gender}')";
+                        DBConnection db = new DBConnection(query);
+                    }
+                    else if (operationName.ToLower() == "update")//update
+                    {
+                        string query = $"update Trainer set Name='{txtName.Text.Trim()}',Age='{age}',Address='{txtAddress.Text.Trim()}'," +
+                      $"Phone='{phone}',Status='{cboStatus.Text}',Gender='{gender}' where Id='{txtId.Text.Trim()}'";
+                        DBConnection db = new DBConnection(query);
+                    }
 
-                    DBConnection db = new DBConnection(query);
-
-                    MessageBox.Show("Successfully Created", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Operation Success.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     Clear();
                     GetData();
@@ -155,7 +169,6 @@ namespace Gym
                 }
 
             }
-
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -193,6 +206,11 @@ namespace Gym
                 MessageBox.Show("Invalid input!",
                       "Warnning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            CreateOrUpdateOperation("update");
         }
     }
 }
