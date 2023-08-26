@@ -33,6 +33,7 @@ namespace Gym
             this.label1 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnPassShowHide = new System.Windows.Forms.Button();
             this.lklRegister = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@ namespace Gym
             this.label2 = new System.Windows.Forms.Label();
             this.lklAdmin = new System.Windows.Forms.LinkLabel();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnPassShowHide = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +69,7 @@ namespace Gym
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox1.Controls.Add(this.btnPassShowHide);
             this.groupBox1.Controls.Add(this.lklRegister);
             this.groupBox1.Controls.Add(this.label4);
@@ -87,6 +87,18 @@ namespace Gym
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Member Login";
+            // 
+            // btnPassShowHide
+            // 
+            this.btnPassShowHide.BackColor = System.Drawing.Color.Transparent;
+            this.btnPassShowHide.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPassShowHide.Location = new System.Drawing.Point(354, 158);
+            this.btnPassShowHide.Name = "btnPassShowHide";
+            this.btnPassShowHide.Size = new System.Drawing.Size(22, 23);
+            this.btnPassShowHide.TabIndex = 23;
+            this.btnPassShowHide.Text = "👁";
+            this.btnPassShowHide.UseVisualStyleBackColor = false;
+            this.btnPassShowHide.Click += new System.EventHandler(this.btnPassShowHide_Click);
             // 
             // lklRegister
             // 
@@ -125,7 +137,7 @@ namespace Gym
             // 
             // btnLogin
             // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnLogin.BackColor = System.Drawing.Color.Blue;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnLogin.Location = new System.Drawing.Point(203, 210);
@@ -182,18 +194,6 @@ namespace Gym
             // errorProvider
             // 
             this.errorProvider.ContainerControl = this;
-            // 
-            // btnPassShowHide
-            // 
-            this.btnPassShowHide.BackColor = System.Drawing.Color.Transparent;
-            this.btnPassShowHide.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPassShowHide.Location = new System.Drawing.Point(354, 158);
-            this.btnPassShowHide.Name = "btnPassShowHide";
-            this.btnPassShowHide.Size = new System.Drawing.Size(22, 23);
-            this.btnPassShowHide.TabIndex = 23;
-            this.btnPassShowHide.Text = "👁";
-            this.btnPassShowHide.UseVisualStyleBackColor = false;
-            this.btnPassShowHide.Click += new System.EventHandler(this.btnPassShowHide_Click);
             // 
             // frmWelcome
             // 

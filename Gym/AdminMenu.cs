@@ -21,7 +21,7 @@ namespace Gym
         {
 
             Auth.Logout();
-            
+
             frmAdminLogin adminLogin = new frmAdminLogin();
             this.Hide();
             adminLogin.Show();
@@ -29,7 +29,7 @@ namespace Gym
 
         private void frmAdminMenu_Load(object sender, EventArgs e)
         {
-            lblLoginAs.Text += " " + Auth.Username;
+            loginAsToolStripMenuItem.Text += " " + Auth.Username;
         }
 
         private void btnTrainers_Click(object sender, EventArgs e)
@@ -37,6 +37,13 @@ namespace Gym
             frmAdminTrainers trainers = new frmAdminTrainers();
             this.Hide();
             trainers.Show();
+        }
+
+        private void adminSettingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmChangePassword changePassword = new frmChangePassword();
+            this.Hide();
+            changePassword.Show();
         }
     }
 }

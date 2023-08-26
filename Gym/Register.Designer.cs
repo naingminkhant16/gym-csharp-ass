@@ -31,7 +31,11 @@ namespace Gym
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnPassShowHide = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.rdbFemale = new System.Windows.Forms.RadioButton();
             this.rdbMale = new System.Windows.Forms.RadioButton();
@@ -49,18 +53,14 @@ namespace Gym
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label10 = new System.Windows.Forms.Label();
-            this.btnPassShowHide = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox1.Controls.Add(this.btnPassShowHide);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.txtUsername);
@@ -91,6 +91,38 @@ namespace Gym
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Register";
             // 
+            // btnPassShowHide
+            // 
+            this.btnPassShowHide.BackColor = System.Drawing.Color.Transparent;
+            this.btnPassShowHide.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPassShowHide.Location = new System.Drawing.Point(351, 151);
+            this.btnPassShowHide.Name = "btnPassShowHide";
+            this.btnPassShowHide.Size = new System.Drawing.Size(22, 23);
+            this.btnPassShowHide.TabIndex = 22;
+            this.btnPassShowHide.Text = "👁";
+            this.btnPassShowHide.UseVisualStyleBackColor = false;
+            this.btnPassShowHide.Click += new System.EventHandler(this.btnPassShowHide_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(30, 400);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(343, 13);
+            this.label10.TabIndex = 21;
+            this.label10.Text = "Don\'t forget your username and password which will be used to LOGIN!";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Enabled = false;
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.Location = new System.Drawing.Point(200, 113);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(145, 21);
+            this.txtUsername.TabIndex = 20;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -100,6 +132,18 @@ namespace Gym
             this.label9.Size = new System.Drawing.Size(47, 16);
             this.label9.TabIndex = 19;
             this.label9.Text = "Phone";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.Location = new System.Drawing.Point(106, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(172, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Register Now";
             // 
             // txtPhone
             // 
@@ -234,7 +278,7 @@ namespace Gym
             // 
             // btnRegister
             // 
-            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnRegister.BackColor = System.Drawing.Color.Blue;
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegister.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnRegister.Location = new System.Drawing.Point(200, 335);
@@ -274,53 +318,9 @@ namespace Gym
             this.label2.TabIndex = 2;
             this.label2.Text = "Username";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(106, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(172, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Register Now";
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.Enabled = false;
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.Location = new System.Drawing.Point(200, 113);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(145, 21);
-            this.txtUsername.TabIndex = 20;
-            // 
             // errorProvider
             // 
             this.errorProvider.ContainerControl = this;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(30, 400);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(343, 13);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "Don\'t forget your username and password which will be used to LOGIN!";
-            // 
-            // btnPassShowHide
-            // 
-            this.btnPassShowHide.BackColor = System.Drawing.Color.Transparent;
-            this.btnPassShowHide.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPassShowHide.Location = new System.Drawing.Point(351, 151);
-            this.btnPassShowHide.Name = "btnPassShowHide";
-            this.btnPassShowHide.Size = new System.Drawing.Size(22, 23);
-            this.btnPassShowHide.TabIndex = 22;
-            this.btnPassShowHide.Text = "👁";
-            this.btnPassShowHide.UseVisualStyleBackColor = false;
-            this.btnPassShowHide.Click += new System.EventHandler(this.btnPassShowHide_Click);
             // 
             // frmRegister
             // 

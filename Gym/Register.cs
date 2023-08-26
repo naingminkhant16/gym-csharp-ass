@@ -40,8 +40,12 @@ namespace Gym
                 //required inputs validation passed
                 if (txtPassword.Text.Trim() != txtComPassword.Text.Trim())//check passwords
                 {
-                    MessageBox.Show("Password doesn't match!", "Password Error",
+                    MessageBox.Show("Password doesn't match!", "Password Warning",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (txtPassword.Text.Trim().Length < 8)//password length check
+                {
+                    MessageBox.Show("Password should have atleast 8 characters!", "Password Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else//password validation passed
                 {
