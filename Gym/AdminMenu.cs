@@ -52,5 +52,12 @@ namespace Gym
             this.Hide();
             gymClass.Show();
         }
+
+        private void addNewAdminToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAddNewAdmin newAdmin = new frmAddNewAdmin();
+            this.Hide();
+            newAdmin.Show();
+        }
     }
 }

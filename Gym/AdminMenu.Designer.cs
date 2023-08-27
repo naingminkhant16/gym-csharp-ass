@@ -38,6 +38,7 @@ namespace Gym
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.adminSettingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addNewAdminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,6 +121,7 @@ namespace Gym
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adminSettingToolStripMenuItem,
+            this.addNewAdminToolStripMenuItem,
             this.loginAsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -141,6 +143,13 @@ namespace Gym
             this.loginAsToolStripMenuItem.Name = "loginAsToolStripMenuItem";
             this.loginAsToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.loginAsToolStripMenuItem.Text = "Login As";
+            // 
+            // addNewAdminToolStripMenuItem
+            // 
+            this.addNewAdminToolStripMenuItem.Name = "addNewAdminToolStripMenuItem";
+            this.addNewAdminToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
+            this.addNewAdminToolStripMenuItem.Text = "Add New Admin";
+            this.addNewAdminToolStripMenuItem.Click += new System.EventHandler(this.addNewAdminToolStripMenuItem_Click);
             // 
             // frmAdminMenu
             // 
@@ -178,5 +187,6 @@ namespace Gym
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem adminSettingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loginAsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addNewAdminToolStripMenuItem;
     }
 }

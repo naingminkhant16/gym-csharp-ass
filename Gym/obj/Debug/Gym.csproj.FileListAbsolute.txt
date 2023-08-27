@@ -15,3 +15,4 @@ D:\BUC\C#\Visual Studio Projects\source\repos\Gym\Gym\obj\Debug\Gym.frmRegister.
 D:\BUC\C#\Visual Studio Projects\source\repos\Gym\Gym\obj\Debug\Gym.frmAdminTrainers.resources
 D:\BUC\C#\Visual Studio Projects\source\repos\Gym\Gym\obj\Debug\Gym.frmChangePassword.resources
 D:\BUC\C#\Visual Studio Projects\source\repos\Gym\Gym\obj\Debug\Gym.frmAdminGymClass.resources
+D:\BUC\C#\Visual Studio Projects\source\repos\Gym\Gym\obj\Debug\Gym.frmAddNewAdmin.resources
