@@ -24,6 +24,12 @@ namespace Gym
             }         
         }
 
-
+        public void CheckRequired(ComboBox cb)
+        {
+            if (string.IsNullOrEmpty(cb.Text))
+            {
+                errorProvider.SetError(cb, "*Select One.");
+            }
+        }
     }
 }

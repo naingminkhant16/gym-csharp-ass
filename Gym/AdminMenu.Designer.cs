@@ -32,7 +32,7 @@ namespace Gym
             this.btnTrainers = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnMembers = new System.Windows.Forms.Button();
-            this.btnClasses = new System.Windows.Forms.Button();
+            this.btnGymClasses = new System.Windows.Forms.Button();
             this.btnEnrollment = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -78,17 +78,18 @@ namespace Gym
             this.btnMembers.Text = "Members";
             this.btnMembers.UseVisualStyleBackColor = false;
             // 
-            // btnClasses
+            // btnGymClasses
             // 
-            this.btnClasses.BackColor = System.Drawing.Color.Blue;
-            this.btnClasses.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClasses.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnClasses.Location = new System.Drawing.Point(169, 146);
-            this.btnClasses.Name = "btnClasses";
-            this.btnClasses.Size = new System.Drawing.Size(216, 48);
-            this.btnClasses.TabIndex = 4;
-            this.btnClasses.Text = "Gym Classes";
-            this.btnClasses.UseVisualStyleBackColor = false;
+            this.btnGymClasses.BackColor = System.Drawing.Color.Blue;
+            this.btnGymClasses.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGymClasses.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnGymClasses.Location = new System.Drawing.Point(169, 146);
+            this.btnGymClasses.Name = "btnGymClasses";
+            this.btnGymClasses.Size = new System.Drawing.Size(216, 48);
+            this.btnGymClasses.TabIndex = 4;
+            this.btnGymClasses.Text = "Gym Classes";
+            this.btnGymClasses.UseVisualStyleBackColor = false;
+            this.btnGymClasses.Click += new System.EventHandler(this.btnGymClasses_Click);
             // 
             // btnEnrollment
             // 
@@ -150,7 +151,7 @@ namespace Gym
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnEnrollment);
-            this.Controls.Add(this.btnClasses);
+            this.Controls.Add(this.btnGymClasses);
             this.Controls.Add(this.btnMembers);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnTrainers);
@@ -171,7 +172,7 @@ namespace Gym
         private System.Windows.Forms.Button btnTrainers;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnMembers;
-        private System.Windows.Forms.Button btnClasses;
+        private System.Windows.Forms.Button btnGymClasses;
         private System.Windows.Forms.Button btnEnrollment;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.MenuStrip menuStrip1;

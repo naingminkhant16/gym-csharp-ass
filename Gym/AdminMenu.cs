@@ -45,5 +45,12 @@ namespace Gym
             this.Hide();
             changePassword.Show();
         }
+
+        private void btnGymClasses_Click(object sender, EventArgs e)
+        {
+            frmAdminGymClass gymClass = new frmAdminGymClass();
+            this.Hide();
+            gymClass.Show();
+        }
     }
 }

@@ -17,7 +17,7 @@ namespace Gym
         {
             InitializeComponent();
         }
-        private bool editMode = false;
+
         private void GetData(string query = "select * from Trainer")
         {
             DBConnection db = new DBConnection(query);
@@ -32,7 +32,7 @@ namespace Gym
 
         private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnUpdate.Enabled = editMode = true;
+            btnUpdate.Enabled = true;
             btnCreate.Enabled = false;
 
 
@@ -71,7 +71,7 @@ namespace Gym
         }
         private void Clear()
         {
-            btnUpdate.Enabled = editMode = false;
+            btnUpdate.Enabled = false;
             btnCreate.Enabled = true;
             txtId.Text = newId().ToString();
             txtName.Text = "";
