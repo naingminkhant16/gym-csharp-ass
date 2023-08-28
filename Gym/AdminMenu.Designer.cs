@@ -37,14 +37,14 @@ namespace Gym
             this.btnLogout = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.adminSettingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loginAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewAdminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loginAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnTrainers
             // 
-            this.btnTrainers.BackColor = System.Drawing.Color.Red;
+            this.btnTrainers.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btnTrainers.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrainers.ForeColor = System.Drawing.SystemColors.Control;
             this.btnTrainers.Location = new System.Drawing.Point(439, 146);
@@ -69,7 +69,7 @@ namespace Gym
             // 
             // btnMembers
             // 
-            this.btnMembers.BackColor = System.Drawing.Color.Fuchsia;
+            this.btnMembers.BackColor = System.Drawing.Color.Purple;
             this.btnMembers.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMembers.ForeColor = System.Drawing.SystemColors.Control;
             this.btnMembers.Location = new System.Drawing.Point(439, 247);
@@ -78,10 +78,11 @@ namespace Gym
             this.btnMembers.TabIndex = 3;
             this.btnMembers.Text = "Members";
             this.btnMembers.UseVisualStyleBackColor = false;
+            this.btnMembers.Click += new System.EventHandler(this.btnMembers_Click);
             // 
             // btnGymClasses
             // 
-            this.btnGymClasses.BackColor = System.Drawing.Color.Blue;
+            this.btnGymClasses.BackColor = System.Drawing.Color.Maroon;
             this.btnGymClasses.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGymClasses.ForeColor = System.Drawing.SystemColors.Control;
             this.btnGymClasses.Location = new System.Drawing.Point(169, 146);
@@ -94,7 +95,7 @@ namespace Gym
             // 
             // btnEnrollment
             // 
-            this.btnEnrollment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnEnrollment.BackColor = System.Drawing.Color.Navy;
             this.btnEnrollment.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnrollment.ForeColor = System.Drawing.SystemColors.Control;
             this.btnEnrollment.Location = new System.Drawing.Point(169, 247);
@@ -137,13 +138,6 @@ namespace Gym
             this.adminSettingToolStripMenuItem.Text = "⚙️ Change Password ";
             this.adminSettingToolStripMenuItem.Click += new System.EventHandler(this.adminSettingToolStripMenuItem_Click);
             // 
-            // loginAsToolStripMenuItem
-            // 
-            this.loginAsToolStripMenuItem.Enabled = false;
-            this.loginAsToolStripMenuItem.Name = "loginAsToolStripMenuItem";
-            this.loginAsToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.loginAsToolStripMenuItem.Text = "Login As";
-            // 
             // addNewAdminToolStripMenuItem
             // 
             this.addNewAdminToolStripMenuItem.Name = "addNewAdminToolStripMenuItem";
@@ -151,11 +145,18 @@ namespace Gym
             this.addNewAdminToolStripMenuItem.Text = "Add New Admin";
             this.addNewAdminToolStripMenuItem.Click += new System.EventHandler(this.addNewAdminToolStripMenuItem_Click);
             // 
+            // loginAsToolStripMenuItem
+            // 
+            this.loginAsToolStripMenuItem.Enabled = false;
+            this.loginAsToolStripMenuItem.Name = "loginAsToolStripMenuItem";
+            this.loginAsToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.loginAsToolStripMenuItem.Text = "Login As";
+            // 
             // frmAdminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Gym.Properties.Resources.R;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnLogout);

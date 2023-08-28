@@ -131,7 +131,7 @@ namespace Gym
             if (string.IsNullOrEmpty(errorProvider.GetError(txtName)) &&
                 string.IsNullOrEmpty(errorProvider.GetError(cboStatus)) &&
                 string.IsNullOrEmpty(errorProvider.GetError(txtAge)) &&
-                string.IsNullOrEmpty(errorProvider.GetError(txtName)) &&
+                string.IsNullOrEmpty(errorProvider.GetError(txtAddress)) &&
                 string.IsNullOrEmpty(errorProvider.GetError(txtPhone)))
             {//all required validation passed
 

@@ -59,5 +59,12 @@ namespace Gym
             this.Hide();
             newAdmin.Show();
         }
+
+        private void btnMembers_Click(object sender, EventArgs e)
+        {
+            frmAdminMember adminMember = new frmAdminMember();
+            this.Hide();
+            adminMember.Show();
+        }
     }
 }

@@ -43,8 +43,10 @@ namespace Gym
             this.label2 = new System.Windows.Forms.Label();
             this.lklAdmin = new System.Windows.Forms.LinkLabel();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -69,7 +71,7 @@ namespace Gym
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox1.BackColor = System.Drawing.Color.Lavender;
             this.groupBox1.Controls.Add(this.btnPassShowHide);
             this.groupBox1.Controls.Add(this.lklRegister);
             this.groupBox1.Controls.Add(this.label4);
@@ -81,9 +83,9 @@ namespace Gym
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtUsername);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(194, 69);
+            this.groupBox1.Location = new System.Drawing.Point(385, 39);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(403, 323);
+            this.groupBox1.Size = new System.Drawing.Size(403, 368);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Member Login";
@@ -182,7 +184,7 @@ namespace Gym
             this.lklAdmin.AutoSize = true;
             this.lklAdmin.BackColor = System.Drawing.Color.Transparent;
             this.lklAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lklAdmin.LinkColor = System.Drawing.Color.White;
+            this.lklAdmin.LinkColor = System.Drawing.Color.Blue;
             this.lklAdmin.Location = new System.Drawing.Point(712, 9);
             this.lklAdmin.Name = "lklAdmin";
             this.lklAdmin.Size = new System.Drawing.Size(76, 15);
@@ -195,13 +197,24 @@ namespace Gym
             // 
             this.errorProvider.ContainerControl = this;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Gym.Properties.Resources._40_gym_1080px_;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 39);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(367, 368);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmWelcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Gym.Properties.Resources.welcome;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lklAdmin);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmWelcome";
@@ -209,6 +222,7 @@ namespace Gym
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,5 +243,6 @@ namespace Gym
         private System.Windows.Forms.LinkLabel lklAdmin;
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.Button btnPassShowHide;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
