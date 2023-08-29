@@ -99,11 +99,29 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserClass.Designer.cs">
+      <DependentUpon>UserClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserEnrolledClasses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserEnrolledClasses.Designer.cs">
+      <DependentUpon>UserEnrolledClasses.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UserMenu.Designer.cs">
       <DependentUpon>UserMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserTrainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserTrainer.Designer.cs">
+      <DependentUpon>UserTrainer.cs</DependentUpon>
     </Compile>
     <Compile Include="Validation.cs" />
     <Compile Include="Welcome.cs">
@@ -146,8 +164,17 @@
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserClass.resx">
+      <DependentUpon>UserClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserEnrolledClasses.resx">
+      <DependentUpon>UserEnrolledClasses.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserMenu.resx">
       <DependentUpon>UserMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserTrainer.resx">
+      <DependentUpon>UserTrainer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
@@ -191,6 +218,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\40-gym_1080px-.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gym1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

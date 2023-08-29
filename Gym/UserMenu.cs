@@ -19,7 +19,37 @@ namespace Gym
 
         private void frmUserMenu_Load(object sender, EventArgs e)
         {
-            lblLoginAs.Text = Auth.Username;
+            lblWelcome.Text += " " + Auth.Username;
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Auth.Logout();
+            frmWelcome welcome = new frmWelcome();
+            this.Hide();
+            welcome.Show();
+        }
+
+        private void btnTrainer_Click(object sender, EventArgs e)
+        {
+            frmUserTrainer userTrainer = new frmUserTrainer();
+            this.Hide();
+            userTrainer.Show();
+
+        }
+
+        private void btnClasses_Click(object sender, EventArgs e)
+        {
+            frmUserClass userClass = new frmUserClass();
+            this.Hide();
+            userClass.Show();
+        }
+
+        private void myEnrolledClassesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUserEnrolledClasses enrolledClasses = new frmUserEnrolledClasses();
+            this.Hide();
+            enrolledClasses.Show();
         }
     }
 }
