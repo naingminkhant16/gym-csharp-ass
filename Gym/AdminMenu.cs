@@ -66,5 +66,12 @@ namespace Gym
             this.Hide();
             adminMember.Show();
         }
+
+        private void btnEnrollment_Click(object sender, EventArgs e)
+        {
+            frmAdminEnrollment adminEnrollment = new frmAdminEnrollment();
+            this.Hide();
+            adminEnrollment.Show();
+        }
     }
 }

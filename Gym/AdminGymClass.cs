@@ -193,19 +193,29 @@ namespace Gym
                 {
                     int idToDelete = Convert.ToInt32(txtToDeleteId.Text.Trim());
 
-                    //ask confirmation message
-                    DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete?", "Confirmation",
-                        MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    if (dialogResult == DialogResult.Yes)
+                    DBConnection cls = new DBConnection($"Select Id from Class where Id='{idToDelete}'");
+
+                    if (cls.GetDataTable().Rows.Count != 1)
                     {
-                        DBConnection db = new DBConnection($"delete from Class where Id='{idToDelete}'");
+                        MessageBox.Show("Invalid Id", "Invalid Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        //ask confirmation message
+                        DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete?", "Confirmation",
+                            MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                        MessageBox.Show("Successfully deleted",
-                          "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            DBConnection db = new DBConnection($"delete from Class where Id='{idToDelete}'");
 
-                        txtToDeleteId.Text = "";
-                        GetData();
+                            MessageBox.Show("Successfully deleted",
+                              "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            txtToDeleteId.Text = "";
+                            GetData();
+                        }
                     }
 
                 }

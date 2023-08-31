@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -58,6 +59,25 @@ namespace Gym
             DBConnection db = new DBConnection(query);
             dgv1.DataSource = db.GetDataTable();
         }
+        private int newId()
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Naing Min Khant\Documents\Gym.mdf;Integrated Security=True;Connect Timeout=30");
+                con.Open();
+                SqlCommand cmd = new SqlCommand("select max(Id) from Enrollment", con);
+                int newId = Convert.ToInt32(cmd.ExecuteScalar());
+                newId++;
+                con.Close();
+                return newId;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return 0;
+            }
+
+        }
 
         private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -70,12 +90,30 @@ namespace Gym
 
             if (string.IsNullOrEmpty(errorProvider.GetError(txtToEnrollId)))
             {
-                string query = $"insert into Enrollment(Member_Id,Class_Id) values ('{Auth.Id}','{txtToEnrollId.Text.Trim()}')";
-                DBConnection db = new DBConnection(query);
-                MessageBox.Show("Successfully Enrolled", "Success",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtToEnrollId.Text = "";
+                try
+                {
+                    int classId = int.Parse(txtToEnrollId.Text.Trim());
+                    DBConnection cls = new DBConnection($"Select Id from Class where Id='{classId}'");
+                    
+                    if (cls.GetDataTable().Rows.Count != 1)
+                    {
+                        MessageBox.Show("Invalid Id", "Invalid Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        string query = $"insert into Enrollment(Id,Member_Id,Class_Id) values ('{newId()}','{Auth.Id}','{classId}')";
+                        DBConnection db = new DBConnection(query);
+                        MessageBox.Show("Successfully Enrolled", "Success",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtToEnrollId.Text = "";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
     }
+
 }

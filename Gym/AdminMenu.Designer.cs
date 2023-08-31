@@ -104,6 +104,7 @@ namespace Gym
             this.btnEnrollment.TabIndex = 5;
             this.btnEnrollment.Text = "Enrollment";
             this.btnEnrollment.UseVisualStyleBackColor = false;
+            this.btnEnrollment.Click += new System.EventHandler(this.btnEnrollment_Click);
             // 
             // btnLogout
             // 

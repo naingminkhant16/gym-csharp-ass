@@ -33,11 +33,11 @@ namespace Gym
             this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.myEnrolledClassesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.btnTrainer = new System.Windows.Forms.Button();
             this.btnClasses = new System.Windows.Forms.Button();
-            this.myEnrolledClassesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
@@ -69,14 +69,21 @@ namespace Gym
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             // 
             // editProfileToolStripMenuItem
             // 
             this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
-            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editProfileToolStripMenuItem.Text = "Edit Profile";
+            // 
+            // myEnrolledClassesToolStripMenuItem
+            // 
+            this.myEnrolledClassesToolStripMenuItem.Name = "myEnrolledClassesToolStripMenuItem";
+            this.myEnrolledClassesToolStripMenuItem.Size = new System.Drawing.Size(123, 20);
+            this.myEnrolledClassesToolStripMenuItem.Text = "My Enrolled Classes";
+            this.myEnrolledClassesToolStripMenuItem.Click += new System.EventHandler(this.myEnrolledClassesToolStripMenuItem_Click);
             // 
             // logoutToolStripMenuItem
             // 
@@ -122,13 +129,6 @@ namespace Gym
             this.btnClasses.Text = "View Classes";
             this.btnClasses.UseVisualStyleBackColor = false;
             this.btnClasses.Click += new System.EventHandler(this.btnClasses_Click);
-            // 
-            // myEnrolledClassesToolStripMenuItem
-            // 
-            this.myEnrolledClassesToolStripMenuItem.Name = "myEnrolledClassesToolStripMenuItem";
-            this.myEnrolledClassesToolStripMenuItem.Size = new System.Drawing.Size(123, 20);
-            this.myEnrolledClassesToolStripMenuItem.Text = "My Enrolled Classes";
-            this.myEnrolledClassesToolStripMenuItem.Click += new System.EventHandler(this.myEnrolledClassesToolStripMenuItem_Click);
             // 
             // pictureBox2
             // 

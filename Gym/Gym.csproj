@@ -52,6 +52,12 @@
     <Compile Include="AddNewAdmin.Designer.cs">
       <DependentUpon>AddNewAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminEnrollment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminEnrollment.Designer.cs">
+      <DependentUpon>AdminEnrollment.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminGymClass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     </Compile>
     <EmbeddedResource Include="AddNewAdmin.resx">
       <DependentUpon>AddNewAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminEnrollment.resx">
+      <DependentUpon>AdminEnrollment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminGymClass.resx">
       <DependentUpon>AdminGymClass.cs</DependentUpon>
