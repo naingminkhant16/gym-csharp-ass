@@ -51,5 +51,12 @@ namespace Gym
             this.Hide();
             enrolledClasses.Show();
         }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmChangePassword changePassword = new frmChangePassword("Member");
+            changePassword.Show();
+            this.Hide();
+        }
     }
 }

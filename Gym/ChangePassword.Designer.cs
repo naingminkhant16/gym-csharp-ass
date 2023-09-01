@@ -184,7 +184,7 @@ namespace Gym
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmChangePassword";
-            this.Text = "Admin Change Password";
+            this.Text = "Change Password";
             this.Load += new System.EventHandler(this.frmChangePassword_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

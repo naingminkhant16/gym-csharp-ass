@@ -17,15 +17,6 @@ namespace Gym
             InitializeComponent();
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-
-            Auth.Logout();
-
-            frmAdminLogin adminLogin = new frmAdminLogin();
-            this.Hide();
-            adminLogin.Show();
-        }
 
         private void frmAdminMenu_Load(object sender, EventArgs e)
         {
@@ -41,7 +32,7 @@ namespace Gym
 
         private void adminSettingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmChangePassword changePassword = new frmChangePassword();
+            frmChangePassword changePassword = new frmChangePassword("Admin");
             this.Hide();
             changePassword.Show();
         }
@@ -72,6 +63,14 @@ namespace Gym
             frmAdminEnrollment adminEnrollment = new frmAdminEnrollment();
             this.Hide();
             adminEnrollment.Show();
+        }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Auth.Logout();
+            frmAdminLogin adminLogin = new frmAdminLogin();
+            this.Hide();
+            adminLogin.Show();
         }
     }
 }

@@ -34,11 +34,11 @@ namespace Gym
             this.btnMembers = new System.Windows.Forms.Button();
             this.btnGymClasses = new System.Windows.Forms.Button();
             this.btnEnrollment = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.adminSettingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewAdminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,25 +106,13 @@ namespace Gym
             this.btnEnrollment.UseVisualStyleBackColor = false;
             this.btnEnrollment.Click += new System.EventHandler(this.btnEnrollment_Click);
             // 
-            // btnLogout
-            // 
-            this.btnLogout.BackColor = System.Drawing.Color.Red;
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnLogout.Location = new System.Drawing.Point(373, 350);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(78, 36);
-            this.btnLogout.TabIndex = 7;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adminSettingToolStripMenuItem,
             this.addNewAdminToolStripMenuItem,
-            this.loginAsToolStripMenuItem});
+            this.loginAsToolStripMenuItem,
+            this.logoutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -153,6 +141,14 @@ namespace Gym
             this.loginAsToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.loginAsToolStripMenuItem.Text = "Login As";
             // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.ForeColor = System.Drawing.Color.Red;
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
+            // 
             // frmAdminMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,7 +156,6 @@ namespace Gym
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnEnrollment);
             this.Controls.Add(this.btnGymClasses);
             this.Controls.Add(this.btnMembers);
@@ -185,10 +180,10 @@ namespace Gym
         private System.Windows.Forms.Button btnMembers;
         private System.Windows.Forms.Button btnGymClasses;
         private System.Windows.Forms.Button btnEnrollment;
-        private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem adminSettingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loginAsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewAdminToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
     }
 }

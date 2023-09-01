@@ -94,18 +94,23 @@ namespace Gym
                 {
                     int classId = int.Parse(txtToEnrollId.Text.Trim());
                     DBConnection cls = new DBConnection($"Select Id from Class where Id='{classId}'");
-                    
+
                     if (cls.GetDataTable().Rows.Count != 1)
                     {
                         MessageBox.Show("Invalid Id", "Invalid Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                     else
                     {
-                        string query = $"insert into Enrollment(Id,Member_Id,Class_Id) values ('{newId()}','{Auth.Id}','{classId}')";
-                        DBConnection db = new DBConnection(query);
-                        MessageBox.Show("Successfully Enrolled", "Success",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txtToEnrollId.Text = "";
+                        DialogResult dialogResult = MessageBox.Show("Please confirm to enroll.", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information); ;
+
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            string query = $"insert into Enrollment(Id,Member_Id,Class_Id) values ('{newId()}','{Auth.Id}','{classId}')";
+                            DBConnection db = new DBConnection(query);
+                            MessageBox.Show("Successfully Enrolled", "Success",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtToEnrollId.Text = "";
+                        }
                     }
                 }
                 catch (Exception ex)

@@ -12,15 +12,25 @@ namespace Gym
 {
     public partial class frmChangePassword : Form
     {
-        public frmChangePassword()
+        private string tableName;
+        public frmChangePassword(string TableName)
         {
+            tableName = TableName;
             InitializeComponent();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            frmAdminMenu AdminMenu = new frmAdminMenu();
-            AdminMenu.Show();
+            if (tableName == "Admin")
+            {
+                frmAdminMenu aMenu = new frmAdminMenu();
+                aMenu.Show();
+            }
+            if (tableName == "Member")
+            {
+                frmUserMenu userMenu = new frmUserMenu();
+                userMenu.Show();
+            }
             this.Hide();
         }
 
@@ -52,7 +62,7 @@ namespace Gym
                 else//passed all validation
                 {
                     string password = Password.Hash(txtNewPass.Text.Trim());
-                    DBConnection db = new DBConnection($"update Admin set Password='{password}' " +
+                    DBConnection db = new DBConnection($"update {tableName} set Password='{password}' " +
                         $"where Id='{Auth.Id}'");
                     MessageBox.Show("Password successfully changed.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtNewPass.Text = txtConfirmPass.Text = "";
