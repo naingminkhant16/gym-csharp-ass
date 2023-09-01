@@ -58,5 +58,12 @@ namespace Gym
             changePassword.Show();
             this.Hide();
         }
+
+        private void editProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUserEditProfile editProfile = new frmUserEditProfile();
+            editProfile.Show();
+            this.Hide();
+        }
     }
 }

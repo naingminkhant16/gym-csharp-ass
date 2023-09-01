@@ -111,6 +111,12 @@
     <Compile Include="UserClass.Designer.cs">
       <DependentUpon>UserClass.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserEditProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserEditProfile.Designer.cs">
+      <DependentUpon>UserEditProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserEnrolledClasses.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserClass.resx">
       <DependentUpon>UserClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserEditProfile.resx">
+      <DependentUpon>UserEditProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserEnrolledClasses.resx">
       <DependentUpon>UserEnrolledClasses.cs</DependentUpon>

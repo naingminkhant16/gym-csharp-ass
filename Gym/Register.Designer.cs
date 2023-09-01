@@ -108,13 +108,14 @@ namespace Gym
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(30, 400);
+            this.label10.Location = new System.Drawing.Point(-3, 400);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(343, 13);
+            this.label10.Size = new System.Drawing.Size(409, 13);
             this.label10.TabIndex = 21;
-            this.label10.Text = "Don\'t forget your username and password which will be used to LOGIN!";
+            this.label10.Text = "Don\'t forget your username and password to login! Those can be changed after logi" +
+    "n.";
             // 
             // txtUsername
             // 
