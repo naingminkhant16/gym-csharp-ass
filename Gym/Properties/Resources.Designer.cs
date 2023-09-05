@@ -73,6 +73,16 @@ namespace Gym.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap enroll {
+            get {
+                object obj = ResourceManager.GetObject("enroll", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Gym {
             get {
                 object obj = ResourceManager.GetObject("Gym", resourceCulture);
@@ -86,6 +96,16 @@ namespace Gym.Properties {
         internal static System.Drawing.Bitmap Gym1 {
             get {
                 object obj = ResourceManager.GetObject("Gym1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap member {
+            get {
+                object obj = ResourceManager.GetObject("member", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -126,6 +146,16 @@ namespace Gym.Properties {
         internal static System.Drawing.Bitmap register {
             get {
                 object obj = ResourceManager.GetObject("register", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trainers {
+            get {
+                object obj = ResourceManager.GetObject("trainers", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

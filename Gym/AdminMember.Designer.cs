@@ -191,7 +191,7 @@ namespace Gym
             // 
             // btnUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Blue;
+            this.btnUpdate.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnUpdate.Location = new System.Drawing.Point(291, 257);
@@ -297,7 +297,7 @@ namespace Gym
             // 
             // btnRefresh
             // 
-            this.btnRefresh.BackColor = System.Drawing.Color.Blue;
+            this.btnRefresh.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnRefresh.ForeColor = System.Drawing.SystemColors.Control;
             this.btnRefresh.Location = new System.Drawing.Point(713, 233);
             this.btnRefresh.Name = "btnRefresh";
@@ -319,7 +319,7 @@ namespace Gym
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.Blue;
+            this.btnSearch.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSearch.Location = new System.Drawing.Point(758, 14);

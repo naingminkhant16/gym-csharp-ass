@@ -76,7 +76,7 @@ namespace Gym
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.Blue;
+            this.btnSearch.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSearch.Location = new System.Drawing.Point(758, 12);
@@ -99,7 +99,7 @@ namespace Gym
             // 
             // btnRefresh
             // 
-            this.btnRefresh.BackColor = System.Drawing.Color.Blue;
+            this.btnRefresh.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnRefresh.ForeColor = System.Drawing.SystemColors.Control;
             this.btnRefresh.Location = new System.Drawing.Point(713, 231);
             this.btnRefresh.Name = "btnRefresh";
@@ -204,7 +204,7 @@ namespace Gym
             // 
             // btnCreate
             // 
-            this.btnCreate.BackColor = System.Drawing.Color.Blue;
+            this.btnCreate.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCreate.Location = new System.Drawing.Point(291, 255);
@@ -229,7 +229,7 @@ namespace Gym
             // 
             // btnUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Blue;
+            this.btnUpdate.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnUpdate.Enabled = false;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.ControlLightLight;

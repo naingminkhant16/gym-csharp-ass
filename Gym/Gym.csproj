@@ -240,5 +240,14 @@
   <ItemGroup>
     <None Include="Resources\Gym1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enroll.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\member.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trainers.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

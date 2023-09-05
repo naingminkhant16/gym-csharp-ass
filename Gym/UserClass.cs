@@ -81,6 +81,8 @@ namespace Gym
 
         private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataGridViewRow row = dgv1.Rows[e.RowIndex];
+            txtToEnrollId.Text = row.Cells["Id"].Value.ToString();
         }
 
         private void btnEnroll_Click(object sender, EventArgs e)

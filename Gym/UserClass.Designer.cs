@@ -48,7 +48,7 @@ namespace Gym
             // 
             // btnRefresh
             // 
-            this.btnRefresh.BackColor = System.Drawing.Color.Blue;
+            this.btnRefresh.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnRefresh.ForeColor = System.Drawing.SystemColors.Control;
             this.btnRefresh.Location = new System.Drawing.Point(713, 276);
             this.btnRefresh.Name = "btnRefresh";
@@ -67,7 +67,7 @@ namespace Gym
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.Color.Blue;
+            this.btnSearch.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSearch.Location = new System.Drawing.Point(759, 40);
@@ -113,7 +113,7 @@ namespace Gym
             // 
             // btnEnroll
             // 
-            this.btnEnroll.BackColor = System.Drawing.Color.Blue;
+            this.btnEnroll.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnEnroll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnroll.ForeColor = System.Drawing.SystemColors.Control;
             this.btnEnroll.Location = new System.Drawing.Point(89, 94);
@@ -172,7 +172,7 @@ namespace Gym
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgv1);
             this.Name = "frmUserClass";
-            this.Text = "User Class";
+            this.Text = "Member - Gym Classes";
             this.Load += new System.EventHandler(this.UserClass_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
             this.groupBox1.ResumeLayout(false);

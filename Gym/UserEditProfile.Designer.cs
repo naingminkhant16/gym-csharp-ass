@@ -32,6 +32,11 @@ namespace Gym
             this.components = new System.ComponentModel.Container();
             this.btnBack = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdbMale = new System.Windows.Forms.RadioButton();
+            this.rdbFemale = new System.Windows.Forms.RadioButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cboStatus = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.btnClear = new System.Windows.Forms.Button();
@@ -42,11 +47,6 @@ namespace Gym
             this.txtAge = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
-            this.cboStatus = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.rdbFemale = new System.Windows.Forms.RadioButton();
-            this.rdbMale = new System.Windows.Forms.RadioButton();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
@@ -89,6 +89,59 @@ namespace Gym
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Edit Profile";
             // 
+            // rdbMale
+            // 
+            this.rdbMale.AutoSize = true;
+            this.rdbMale.Location = new System.Drawing.Point(182, 308);
+            this.rdbMale.Name = "rdbMale";
+            this.rdbMale.Size = new System.Drawing.Size(48, 17);
+            this.rdbMale.TabIndex = 18;
+            this.rdbMale.TabStop = true;
+            this.rdbMale.Text = "Male";
+            this.rdbMale.UseVisualStyleBackColor = true;
+            // 
+            // rdbFemale
+            // 
+            this.rdbFemale.AutoSize = true;
+            this.rdbFemale.Location = new System.Drawing.Point(266, 308);
+            this.rdbFemale.Name = "rdbFemale";
+            this.rdbFemale.Size = new System.Drawing.Size(59, 17);
+            this.rdbFemale.TabIndex = 17;
+            this.rdbFemale.TabStop = true;
+            this.rdbFemale.Text = "Female";
+            this.rdbFemale.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(46, 309);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 16);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Gender";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(46, 257);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 16);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Status";
+            // 
+            // cboStatus
+            // 
+            this.cboStatus.FormattingEnabled = true;
+            this.cboStatus.Items.AddRange(new object[] {
+            "Active",
+            "Inactive"});
+            this.cboStatus.Location = new System.Drawing.Point(182, 256);
+            this.cboStatus.Name = "cboStatus";
+            this.cboStatus.Size = new System.Drawing.Size(145, 21);
+            this.cboStatus.TabIndex = 13;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -120,7 +173,7 @@ namespace Gym
             // 
             // btnCreate
             // 
-            this.btnCreate.BackColor = System.Drawing.Color.Blue;
+            this.btnCreate.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCreate.Location = new System.Drawing.Point(202, 374);
@@ -184,59 +237,6 @@ namespace Gym
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(145, 21);
             this.txtUsername.TabIndex = 3;
-            // 
-            // cboStatus
-            // 
-            this.cboStatus.FormattingEnabled = true;
-            this.cboStatus.Items.AddRange(new object[] {
-            "Active",
-            "Inactive"});
-            this.cboStatus.Location = new System.Drawing.Point(182, 256);
-            this.cboStatus.Name = "cboStatus";
-            this.cboStatus.Size = new System.Drawing.Size(145, 21);
-            this.cboStatus.TabIndex = 13;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(46, 257);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 16);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Status";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(46, 309);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 16);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Gender";
-            // 
-            // rdbFemale
-            // 
-            this.rdbFemale.AutoSize = true;
-            this.rdbFemale.Location = new System.Drawing.Point(266, 308);
-            this.rdbFemale.Name = "rdbFemale";
-            this.rdbFemale.Size = new System.Drawing.Size(59, 17);
-            this.rdbFemale.TabIndex = 17;
-            this.rdbFemale.TabStop = true;
-            this.rdbFemale.Text = "Female";
-            this.rdbFemale.UseVisualStyleBackColor = true;
-            // 
-            // rdbMale
-            // 
-            this.rdbMale.AutoSize = true;
-            this.rdbMale.Location = new System.Drawing.Point(182, 308);
-            this.rdbMale.Name = "rdbMale";
-            this.rdbMale.Size = new System.Drawing.Size(48, 17);
-            this.rdbMale.TabIndex = 18;
-            this.rdbMale.TabStop = true;
-            this.rdbMale.Text = "Male";
-            this.rdbMale.UseVisualStyleBackColor = true;
             // 
             // errorProvider
             // 

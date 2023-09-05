@@ -35,9 +35,9 @@ namespace Gym
             this.editProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.myEnrolledClassesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblWelcome = new System.Windows.Forms.Label();
             this.btnTrainer = new System.Windows.Forms.Button();
             this.btnClasses = new System.Windows.Forms.Button();
+            this.lblWelcome = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
@@ -69,14 +69,14 @@ namespace Gym
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // editProfileToolStripMenuItem
             // 
             this.editProfileToolStripMenuItem.Name = "editProfileToolStripMenuItem";
-            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editProfileToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.editProfileToolStripMenuItem.Text = "Edit Profile";
             this.editProfileToolStripMenuItem.Click += new System.EventHandler(this.editProfileToolStripMenuItem_Click);
             // 
@@ -95,16 +95,6 @@ namespace Gym
             this.logoutToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.logoutToolStripMenuItem.Text = "Logout";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
-            // 
-            // lblWelcome
-            // 
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(290, 60);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(122, 29);
-            this.lblWelcome.TabIndex = 1;
-            this.lblWelcome.Text = "Welcome";
             // 
             // btnTrainer
             // 
@@ -132,6 +122,16 @@ namespace Gym
             this.btnClasses.UseVisualStyleBackColor = false;
             this.btnClasses.Click += new System.EventHandler(this.btnClasses_Click);
             // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.Location = new System.Drawing.Point(258, 64);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(157, 37);
+            this.lblWelcome.TabIndex = 10;
+            this.lblWelcome.Text = "Welcome";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = global::Gym.Properties.Resources.Gym1;
@@ -158,11 +158,11 @@ namespace Gym
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.btnClasses);
             this.Controls.Add(this.btnTrainer);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmUserMenu";
@@ -183,12 +183,12 @@ namespace Gym
         private System.Windows.Forms.ToolStripMenuItem settingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editProfileToolStripMenuItem;
-        private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnTrainer;
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.Button btnClasses;
         private System.Windows.Forms.ToolStripMenuItem myEnrolledClassesToolStripMenuItem;
+        private System.Windows.Forms.Label lblWelcome;
     }
 }

@@ -52,7 +52,8 @@ namespace Gym
                     // phone validation
                     try
                     {
-                        Convert.ToInt32(txtPhone.Text.Trim());//validation for string inputs
+                        Convert.ToInt32(txtAge.Text.Trim());//validation for string inputs Age
+                        Convert.ToInt32(txtPhone.Text.Trim());//validation for string inputs Phone
                         if (txtPhone.Text.Trim().Length > 10)
                         {
                             MessageBox.Show("Phone Number can't longer than 10 characters!", "Invalid Phone", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -91,7 +92,7 @@ namespace Gym
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Invalid Phone Number", "Invalid Phone", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(ex.Message, "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
 
                 }

@@ -65,5 +65,7 @@ namespace Gym
             editProfile.Show();
             this.Hide();
         }
+
+       
     }
 }

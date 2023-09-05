@@ -52,7 +52,15 @@ namespace Gym
                 string.IsNullOrEmpty(errorProvider.GetError(txtConfirmPass))
                 )
             {
-                if (txtPassword.Text.Trim().Length < 8)//password length check
+                //check duplicated username
+                DBConnection checkUsernameDuplicated = new DBConnection($"select Username from Admin where Username='{txtUsername.Text.Trim()}' and Id!='{Auth.Id}'");
+
+                if (checkUsernameDuplicated.GetDataTable().Rows.Count > 0)
+                {
+                    MessageBox.Show("Username is already taken", "Invalid Username",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (txtPassword.Text.Trim().Length < 8)//password length check
                 {
                     MessageBox.Show("Password should have atleast 8 characters!", "Password Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }

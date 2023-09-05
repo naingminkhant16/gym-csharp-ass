@@ -91,7 +91,7 @@ namespace Gym
             // 
             // btnSubmit
             // 
-            this.btnSubmit.BackColor = System.Drawing.Color.Blue;
+            this.btnSubmit.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSubmit.Location = new System.Drawing.Point(182, 216);

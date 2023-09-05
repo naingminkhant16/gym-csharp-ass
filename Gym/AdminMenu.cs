@@ -17,18 +17,10 @@ namespace Gym
             InitializeComponent();
         }
 
-
         private void frmAdminMenu_Load(object sender, EventArgs e)
         {
             loginAsToolStripMenuItem.Text += " " + Auth.Username;
-        }
-
-        private void btnTrainers_Click(object sender, EventArgs e)
-        {
-            frmAdminTrainers trainers = new frmAdminTrainers();
-            this.Hide();
-            trainers.Show();
-        }
+        }     
 
         private void adminSettingToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -37,33 +29,12 @@ namespace Gym
             changePassword.Show();
         }
 
-        private void btnGymClasses_Click(object sender, EventArgs e)
-        {
-            frmAdminGymClass gymClass = new frmAdminGymClass();
-            this.Hide();
-            gymClass.Show();
-        }
-
         private void addNewAdminToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmAddNewAdmin newAdmin = new frmAddNewAdmin();
             this.Hide();
             newAdmin.Show();
-        }
-
-        private void btnMembers_Click(object sender, EventArgs e)
-        {
-            frmAdminMember adminMember = new frmAdminMember();
-            this.Hide();
-            adminMember.Show();
-        }
-
-        private void btnEnrollment_Click(object sender, EventArgs e)
-        {
-            frmAdminEnrollment adminEnrollment = new frmAdminEnrollment();
-            this.Hide();
-            adminEnrollment.Show();
-        }
+        }    
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -71,6 +42,34 @@ namespace Gym
             frmAdminLogin adminLogin = new frmAdminLogin();
             this.Hide();
             adminLogin.Show();
+        }
+
+        private void btnTrainer_Click(object sender, EventArgs e)
+        {
+            frmAdminTrainers trainers = new frmAdminTrainers();
+            this.Hide();
+            trainers.Show();
+        }
+
+        private void btnMember_Click(object sender, EventArgs e)
+        {
+            frmAdminMember adminMember = new frmAdminMember();
+            this.Hide();
+            adminMember.Show();
+        }
+
+        private void btnClass_Click(object sender, EventArgs e)
+        {
+            frmAdminGymClass gymClass = new frmAdminGymClass();
+            this.Hide();
+            gymClass.Show();
+        }
+
+        private void btnEnroll_Click(object sender, EventArgs e)
+        {
+            frmAdminEnrollment adminEnrollment = new frmAdminEnrollment();
+            this.Hide();
+            adminEnrollment.Show();
         }
     }
 }
