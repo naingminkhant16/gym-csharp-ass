@@ -24,6 +24,15 @@ namespace Gym
         private void frmAdminEnrollment_Load(object sender, EventArgs e)
         {
             GetData();
+
+            DBConnection db = new DBConnection("select Title from Class");
+
+            foreach (DataRow row in db.GetDataTable().Rows)
+            {
+                cboClasses.Items.Add(row["Title"].ToString());
+            }
+
+            btnUpdate.Enabled = false;
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -88,6 +97,51 @@ namespace Gym
             {
                 MessageBox.Show("Invalid input!",
                       "Warnning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dgv1.Rows[e.RowIndex];
+            txtId.Text = row.Cells["Id"].Value.ToString();
+            txtMember.Text = row.Cells["Member Name"].Value.ToString();
+            cboClasses.Text = row.Cells["Class Title"].Value.ToString();
+
+            btnUpdate.Enabled = true;
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtId.Text = txtMember.Text = cboClasses.Text = "";
+            btnUpdate.Enabled = false;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(cboClasses.Text))
+            {
+                MessageBox.Show("Please choose one class", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                //get class Id from selected Class Title
+                DBConnection db = new DBConnection($"select Id from Class where Title='{cboClasses.Text}'");
+                if (db.GetDataTable().Rows.Count > 0)
+                {
+                    string classId = db.GetDataTable().Rows[0]["Id"].ToString();
+
+                    DBConnection updateEnrollment = new DBConnection($"update Enrollment set Class_Id = '{classId}' " +
+                        $"where Id = '{txtId.Text}'");
+                    MessageBox.Show("Successfully Updated", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    txtId.Text = txtMember.Text = cboClasses.Text = "";
+                    btnUpdate.Enabled = false;
+                    GetData();
+                }
+                else
+                {
+                    MessageBox.Show("Failure on Update!", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

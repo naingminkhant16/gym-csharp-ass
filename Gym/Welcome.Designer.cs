@@ -44,6 +44,7 @@ namespace Gym
             this.lklAdmin = new System.Windows.Forms.LinkLabel();
             this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -72,6 +73,7 @@ namespace Gym
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Lavender;
+            this.groupBox1.Controls.Add(this.btnExit);
             this.groupBox1.Controls.Add(this.btnPassShowHide);
             this.groupBox1.Controls.Add(this.lklRegister);
             this.groupBox1.Controls.Add(this.label4);
@@ -207,6 +209,19 @@ namespace Gym
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Red;
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnExit.Location = new System.Drawing.Point(165, 312);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(78, 36);
+            this.btnExit.TabIndex = 24;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // frmWelcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,5 +259,6 @@ namespace Gym
         private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.Button btnPassShowHide;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnExit;
     }
 }

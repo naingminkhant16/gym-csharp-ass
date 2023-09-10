@@ -76,19 +76,24 @@ namespace Gym
                     try
                     {
                         Convert.ToInt32(txtPhone.Text.Trim());//validation for string inputs
-                        Convert.ToInt32(txtAge.Text.Trim());//validation for string inputs
+                        int age = Convert.ToInt32(txtAge.Text.Trim());//validation for string inputs
+
                         if (txtPhone.Text.Trim().Length > 10)
                         {
                             MessageBox.Show("Phone Number can't longer than 10 characters!",
                                 "Invalid Phone", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else if (age > 75 || age < 10)
+                        {                      
+                                MessageBox.Show("Age limit is between 10 and 75! Members who are under 10 or over 75 are not allowed!",
+                                  "Invalid Age", MessageBoxButtons.OK, MessageBoxIcon.Warning);                         
                         }
                         else
                         {
                             //all validations passed
                             string name = txtName.Text.Trim();
                             string username = txtUsername.Text.Trim();
-                            string gender = (rdbMale.Checked) ? "Male" : "Female";
-                            string age = txtAge.Text.Trim();
+                            string gender = (rdbMale.Checked) ? "Male" : "Female";                           
                             string phone = txtPhone.Text.Trim();
                             string status = cboStatus.Text;
 

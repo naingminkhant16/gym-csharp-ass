@@ -52,11 +52,16 @@ namespace Gym
                     // phone validation
                     try
                     {
-                        Convert.ToInt32(txtAge.Text.Trim());//validation for string inputs Age
+                        int age = Convert.ToInt32(txtAge.Text.Trim());//validation for string inputs Age
                         Convert.ToInt32(txtPhone.Text.Trim());//validation for string inputs Phone
                         if (txtPhone.Text.Trim().Length > 10)
                         {
                             MessageBox.Show("Phone Number can't longer than 10 characters!", "Invalid Phone", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else if (age > 75 || age < 10)
+                        {
+                            MessageBox.Show("Age limit is between 10 and 75! Members who are under 10 or over 75 are not allowed!",
+                              "Invalid Age", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                         else
                         {
@@ -64,9 +69,7 @@ namespace Gym
                             string name = txtName.Text.Trim();
                             string password = Password.Hash(txtPassword.Text.Trim());
                             string username = txtUsername.Text.Trim();
-                            string gender = (rdbFemale.Checked) ? "Female" : "Male";
-
-                            string age = txtAge.Text.Trim();
+                            string gender = (rdbFemale.Checked) ? "Female" : "Male";                          
                             string phone = txtPhone.Text.Trim();
                             string status = "Active";
 

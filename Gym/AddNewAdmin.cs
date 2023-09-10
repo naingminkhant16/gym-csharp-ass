@@ -53,7 +53,7 @@ namespace Gym
                 )
             {
                 //check duplicated username
-                DBConnection checkUsernameDuplicated = new DBConnection($"select Username from Admin where Username='{txtUsername.Text.Trim()}' and Id!='{Auth.Id}'");
+                DBConnection checkUsernameDuplicated = new DBConnection($"select Username from Admin where Username='{txtUsername.Text.Trim()}'");
 
                 if (checkUsernameDuplicated.GetDataTable().Rows.Count > 0)
                 {
@@ -75,6 +75,7 @@ namespace Gym
                     MessageBox.Show("New Admin successfully Created.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtUsername.Text = txtPassword.Text = txtConfirmPass.Text = "";
                 }
+
             }
         }
 
